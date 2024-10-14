@@ -1,0 +1,140 @@
+:root {
+    --color-primario: #4cd7d7;
+    --color-secundario: #d4b7d1;
+    --color-acento: #06050a;
+    --color-texto: #9b4040;
+    --color-fondo: #ffffff;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+  }
+  
+  .App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .boton {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .boton:hover {
+    background-color: var(--color-acento);
+    transform: translateY(-2px);
+  }
+  
+  .titulo {
+    text-align: center;
+    color: var(--color-acento);
+    margin-bottom: 30px;
+  }
+  
+  .entrada {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+  }
+  
+  .lista-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .tarjeta {
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tarjeta img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta h3 {
+    margin: 10px 0;
+    color: var(--color-acento);
+  }
+  
+  .pagina-agregar form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--color-primario);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+  }
+  
+  .lista-miembros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .miembro-equipo {
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    width: 250px;
+  }
+  
+  .miembro-equipo img {
+    width: 130px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .miembro-equipo h3 {
+    color: var(--color-acento);
+    margin: 10px 0;
+  }
+  
+  .miembro-equipo p {
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .lista-tarjetas {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  
+    .miembro-equipo {
+      width: 100%;
+    }
+  }
